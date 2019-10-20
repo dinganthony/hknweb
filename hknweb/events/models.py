@@ -6,7 +6,8 @@ class EventType(models.Model):
     #TODO: refactor to use different var name, type is a reserved keyword
     #TODO: check dependencies on this model and EventType.type
     type = models.CharField(max_length=255)
-
+    color = models.CharField(max_length=6) #string with the hex value
+    
     def __repr__(self):
         return "EventType(type={})".format(self.type)
 
